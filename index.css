@@ -1,0 +1,25 @@
+body{
+    background: url(background.jpg);
+    color: black;
+    text-align: center; 
+}
+ul{
+    float: left;
+    text-align: left;
+}
+table{
+    border: 2px solid;
+    text-align: center;
+    color: black;
+    background: rgba(128,128,128,0.5);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+td{
+    border: 3px solid black;
+}
+th{
+    border: 3px solid black;
+}
+
