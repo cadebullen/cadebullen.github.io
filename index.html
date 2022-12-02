@@ -4,71 +4,148 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>My Personal Webpage</title>
+        <title>Cade Bullen - Personal Webpage</title>
         
     </head>
     <body>
-        <h1>About Me:</h1>
-            <a href="https://github.com/cadebullen" class="fa fa-github" style="font-size:36px; color:black" target="_blank"></a>
-            <a href="https://www.linkedin.com/in/cadebullen/" class="fa fa-linkedin" style="font-size:36px; color:black" target="_blank"></a>
-            <a href="mailto: cadeblewis@gmail.com"><h3>Email</h3></a>
-            
-        <p>
-            Hello all, my name is Cade Brandon Bullen. I am a computer science major currently looking for an intership or co-op,
-            <br> in hopes of earning experience in the tech field. Currently, my main focus of interested is in software engineering 
-            - that is either frontend, <br> backend, or full stack. I also hold interests in QA testing, IT,Data Science, and Game Development.
-            
-            <h5> Education</h5>
-            New Jersey Institute of Technology (NJIT)<br>
-            Newark, New Jersey 07102.
+        <div class="tab">
+            <button class="tablink" onclick="openTab(event, 'homepage')"> Home</button>
+            <button class="tablink" onclick="openTab(event, 'languages')">Languages/Skills</button>
+            <button class="tablink" onclick="openTab(event, 'courses')"> Courses</button>
+            <button class="tablink" onclick="openTab(event, 'projects')">Projects</button>
+        </div>
 
-            <br><small> GPA: 2.8 </small>
-            <br> <small>Honors: Dean's List (Fall 2021) </small>
-        </p>
-        <ul><b>Languages Learned/Skills:</b>
-            <li>Java (Data Structures & Algorithms)</li>
-            <li>Python (Lists, Dictionaries, Files)</li>
-            <li> HTML & CSS</li>
-            <li> Javascript (JSON & JQuery, AJAX)</li>
-            <li>PHP (MySQL)</li>
-        </ul>
-
-        <form>
-            <table>
-                <tr>
-                    <th>Course Name:</th>
-                    <th>Course Description:</th>
-                </tr>
-                <tr>
-                    <td> CS 100: Roadmap to Computing</td>
-                    <td> An introduction to programming and problem solving skills using Python or other very high level language. 
-                        Topics include basic strategies for problem solving, constructs that control the flow of execution of a program 
-                        and the use of high level data types such as lists, strings and dictionaries in problem representation. 
-                        The course also presents an overview of selected topics in computing, such as networking and databases.</td>
-                </tr>
-                <tr>
-                    <td> CS 113: Intro to Computer Science I</td>
-                    <td> Problem solving decomposition. Writing, debugging, and analyzing computer programs. 
-                        Introduction to arrays and lists. Iteration and recursion. The Java language is introduced 
-                        and used to highlight these concepts.</td>
-                <tr>
-                    <td> CS 114: Intro to Computer Science II</td>
-                    <td> A study of advanced programming topics with logical structures of data, their physical representation, 
-                        and the design of computer algorithms operating on the structures. 
-                        Course covers program specifications, correctness and efficiency, data abstraction, and algorithm analysis.</td>
-                </tr>
-                <tr>
-                    <td> IT 202: Internet Applications</td>
-                    <td> This course presents the concepts and software technologies that underline web-oriented, three-tier software 
-                        architectures and applications. The enabling software mechanism include the markup languages (HTML5 and CSS3)
-                         used by browsers, client-side scripting languages and libraries (Javascript and AJAX), web servers and server-side-scripting 
-                         languages (Apache, PHP, HTTP protocol), and background databases (SQL, MySQL). The course uses a hands-on, 
-                         guided development approach with substantial assignments to illustrate the fundamental computing concepts systems, 
-                         and technologies considered and to provide direct experience in their use.</td>
-                </tr>
-            </table>
-        </form>
+        <div id="homepage" class="tabContent" style="display: contents;">
+            <a href="https://github.com/cadebullen" class="fa fa-github" style="font-size:36px; color:grey" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/cadebullen/" class="fa fa-linkedin" style="font-size:36px; color:grey" target="_blank"></a>
+            <a href="mailto: cadeblewis@gmail.com" class="fa fa-envelope" style="font-size:36px; color:grey;" target="_blank"></a>
             
+            <p>
+                <h1 id="first">Hello, my name is Cade Brandon Bullen. <br> I am currently studying Computer Science. </h1>
+                
+                I am a student currently looking for an intership or co-op,
+                <br> in hopes of earning experience in the tech field. Currently,
+                 my main focus of interest is in software engineering 
+                - that is either frontend, <br> backend, or full stack. 
+                I also hold interests in QA testing, IT, Data Science, and Game Development.
+                
+                <h5> Education</h5>
+                New Jersey Institute of Technology (NJIT)<br>
+                Newark, New Jersey 07102.
+
+                <br><small> GPA: 2.8 </small>
+                <br> <small>Honors: Dean's List (Fall 2021) </small>
+            </p>
+        </div>
+
+        <div id="languages" class="tabContent">
+            <ul><b>Languages Learned/Skills:</b>
+                <li>Java (Data Structures & Algorithms)</li>
+                <li>Python (Lists, Dictionaries, Files)</li>
+                <li>HTML & CSS</li>
+                <li>Javascript (JSON & JQuery, AJAX)</li>
+                <li>PHP (MySQL)</li>
+            </ul>
+        </div>
+
+        <div id="courses" class="tabContent">
+            <form>
+                <table>
+                    <tr>
+                        <th>Course Name:</th>
+                        <th>Course Description:</th>
+                    </tr>
+                    <tr>
+                        <td> CS 100: Roadmap to Computing</td>
+                        <td> An introduction to programming and problem solving skills using Python or other very high level language. 
+                            Topics include basic strategies for problem solving, constructs that control the flow of execution of a program 
+                            and the use of high level data types such as lists, strings and dictionaries in problem representation. 
+                            The course also presents an overview of selected topics in computing, such as networking and databases.</td>
+                    </tr>
+                    <tr>
+                        <td> CS 113: Intro to Computer Science I</td>
+                        <td> Problem solving decomposition. Writing, debugging, and analyzing computer programs. 
+                            Introduction to arrays and lists. Iteration and recursion. The Java language is introduced 
+                            and used to highlight these concepts.</td>
+                    <tr>
+                        <td> CS 114: Intro to Computer Science II</td>
+                        <td> A study of advanced programming topics with logical structures of data, their physical representation, 
+                            and the design of computer algorithms operating on the structures. 
+                            Course covers program specifications, correctness and efficiency, data abstraction, and algorithm analysis.</td>
+                    </tr>
+                    <tr>
+                        <td> IT 202: Internet Applications</td>
+                        <td> This course presents the concepts and software technologies that underline web-oriented, three-tier software 
+                            architectures and applications. The enabling software mechanism include the markup languages (HTML5 and CSS3)
+                            used by browsers, client-side scripting languages and libraries (Javascript and AJAX), web servers and server-side-scripting 
+                            languages (Apache, PHP, HTTP protocol), and background databases (SQL, MySQL). The course uses a hands-on, 
+                            guided development approach with substantial assignments to illustrate the fundamental computing concepts systems, 
+                            and technologies considered and to provide direct experience in their use.</td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="projects" class="tabContent">
+            <form>
+                <table>
+                    <tr>
+                        <th> Language:</th>
+                        <th> Name: </th>
+                        <th> Project Description: </th>
+                        <th> Link: </th>
+                        <th> Progress: </th>
+                    </tr>
+                    <tr>
+                        <td> Java</td>
+                        <td> Employee Payment System </td>
+                        <td> A Program that illustrates Object-Oriented Programing, Polymorphism, and Inheritance. There is a hierarchy of employees: Staff Member, Executive, Employee, and Volunteer. 
+                            The driver code is located in Staff and provides examples of these employees being paid with salary, hourly, and/or commission pay while also providing information on vacation days.
+                            The staff list uses an array to provide detailed information about the staff’s name, phone number, address, and type of pay.</td>
+                        <td> <a href="https://github.com/cadebullen/Employee-Payment-System.Java"> Source Code. </a> </td>
+                        <td> <mark>Completed </mark> <br> <small>(Will be improved in the future) </small></td>
+                     </tr>
+                    <tr>
+                        <td> HTML, CSS, JSON, JavaScript & JQuery</td>
+                        <td> Weather/Forecast Website </td>
+                        <td> This website uses an API from OpenWeather to provide forecasts of 5 days from locations provided by the user.
+                            The information is parsed by JSON and updated on the website as the user waits for the information to load. It allows the users to compare the weather from different cities. </td>
+                        <td> <a href="https://web.njit.edu/~cbb23/forecast.html"> Webstie!</a> </td>
+                        <td> <mark> Completed</mark> <br> <small> (Will be improved in the future)</small></td>
+                    </tr>
+                     <tr>
+                        <td> HTML, CSS, JavaScript</td>
+                        <td> Password Strength Website</td>
+                        <td> A website that validates the users' input and provides feedback on how to create a strong password. 
+                            On the website, there is information about what contains a solid password to help guide the user.</td>
+                        <td> <a href="https://github.com/cadebullen/StrongPassword"> Source Code.</a></td>
+                        <td> <mark> Incomplete</mark> <br> <small> (Will be completed soon)</small></td>
+                    </tr>
+                </table>
+            </form>
+        </div>   
     </body>
+
+    <script>
+        function openTab(event, tab){
+            var i;
+            var tabContent;
+            var tablink;
+
+            tabContent = document.getElementsByClassName("tabContent"); // hide elements with tabContent class
+            for (i = 0; i < tabContent.length; i++){
+                tabContent[i].style.display = "none"; 
+            }
+
+            tablink = document.getElementsByClassName("tablink"); // remove active class from elements with tablink class
+            for (i = 0; i < tablink.length; i++){
+                tablink[i].className = tablink[i].className.replace("active", "");
+            }
+
+            document.getElementById(tab).style.display = "block"; // show tab
+            event.currentTarget.className += "active"; // add active class to the opened tab
+
+
+        }
+    </script>
 </html>
 
