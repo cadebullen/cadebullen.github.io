@@ -48,6 +48,7 @@ th{
     padding: 18px;
     background-color: black;
     float: left;
+    color: white;
 }
 .tab button:hover{
     background-color:chartreuse;    
