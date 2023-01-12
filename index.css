@@ -1,6 +1,6 @@
 body{
     background: url("background.jpg");
-    color: white;
+    color: whitesmoke;
     text-align: center; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: medium;
@@ -10,9 +10,6 @@ body{
     width: 100;
     height: auto;
 
-}
-ul{ 
-    text-align: left;
 }
 table{
     border: 2px solid;
@@ -29,10 +26,7 @@ table{
     margin-right: auto;
     width: 100%;
 }
-td{
-    border: 3px solid black;
-}
-th{
+td, th{
     border: 3px solid black;
 }
 .tab{
@@ -48,12 +42,19 @@ th{
     padding: 18px;
     background-color: white;
     float: left;
-    color: white;
+    color: black;
 }
 .tab button:hover{
     background-color:chartreuse;    
 }
 .tabContent{
     display: none;
+}
+mark{
+    background-color: unset;
+    color: blue;
+}
+a:visited{
+    color: blue;
 }
 
