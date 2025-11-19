@@ -2,16 +2,38 @@
   try {
     await loadTrianglesPreset(tsParticles);
 
+    // Detect if mobile device
+    const isMobile = window.innerWidth <= 768;
+
     await tsParticles.load({
       id: "tsparticles",
       options: {
         preset: "triangles",
+        particles: {
+          number: {
+            value: isMobile ? 20 : 80, // Fewer particles on mobile
+            density: {
+              enable: true,
+              area: isMobile ? 1200 : 800,
+            },
+          },
+          move: {
+            speed: isMobile ? 1 : 2, // Slower movement on mobile
+          },
+          size: {
+            value: { min: isMobile ? 2 : 1, max: isMobile ? 4 : 5 },
+          },
+        },
+        fpsLimit: isMobile ? 30 : 60, // Lower FPS on mobile for better performance
       },
     });
 
     console.log("Particles loaded successfully!");
   } catch (error) {
     console.error("Error loading particles:", error);
+
+    // Detect if mobile device for fallback
+    const isMobile = window.innerWidth <= 768;
 
     await tsParticles.load({
       id: "tsparticles",
@@ -21,7 +43,7 @@
             value: "#0d47a1",
           },
         },
-        fpsLimit: 120,
+        fpsLimit: isMobile ? 30 : 60,
         particles: {
           color: {
             value: "#ffffff",
@@ -40,15 +62,15 @@
               default: "bounce",
             },
             random: false,
-            speed: 2,
+            speed: isMobile ? 1 : 2,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: isMobile ? 1200 : 800,
             },
-            value: 50,
+            value: isMobile ? 20 : 50,
           },
           opacity: {
             value: 0.5,
@@ -57,7 +79,7 @@
             type: "triangle",
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: isMobile ? 2 : 1, max: isMobile ? 4 : 5 },
           },
         },
         detectRetina: true,
